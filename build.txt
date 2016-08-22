@@ -1,0 +1,8 @@
+﻿author = jopojelly
+version = 0.0.0.2
+displayName = Alternate Dimensions Example
+homepage = 
+buildIgnore = .vs\*, Properties\*, *.csproj, *.user, obj\*, bin\*, *.config
+includePDB = true
+languageVersion = 6
+modReferences = AlternateDimensions

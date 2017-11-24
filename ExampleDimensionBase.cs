@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace AlternateDimensionsExample
 {
-	class ExampleDimensionBase : ModWorld
+	abstract class ExampleDimensionBase : ModWorld
 	{
 		public override bool Autoload(ref string name) => false;
 

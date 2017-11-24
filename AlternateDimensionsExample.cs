@@ -10,18 +10,13 @@ namespace AlternateDimensionsExample
 	{
 		public AlternateDimensionsExample()
 		{
-			Properties = new ModProperties()
-			{
-				Autoload = true,
-				AutoloadSounds = true
-			};
 		}
 
 		public override void PostSetupContent()
 		{
 			Mod altDimensions = ModLoader.GetMod("AlternateDimensions");
-			ExampleDimensionA exampleDimensionA = (ExampleDimensionA)GetModWorld("ExampleDimensionA");
-			ExampleDimensionB exampleDimensionB = (ExampleDimensionB)GetModWorld("ExampleDimensionB");
+			ExampleDimensionA exampleDimensionA = GetModWorld<ExampleDimensionA>();
+			ExampleDimensionB exampleDimensionB = GetModWorld<ExampleDimensionB>();
 			if (altDimensions != null)
 			{
 				AlternateDimensionInterface.RegisterDimension(Name, "A Dimension", exampleDimensionA.GenerateDimension);
@@ -33,7 +28,7 @@ namespace AlternateDimensionsExample
 			}
 		}
 
-		public override void ChatInput(string text)
+		public /*override*/ void ChatInput(string text)
 		{
 			if (text[0] != '/')
 			{
